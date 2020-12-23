@@ -1,4 +1,4 @@
-var questions = [{
+var questionArray = [{
     question: "Which engine came stock in the MKIV Supra?",
     choices: ["RB20", "LS3", "SR20", "2JZ"],
     correctAnswer: 3
@@ -35,3 +35,4 @@ var questions = [{
     choices: ["Ferrari", "Lamborghini", "Mercedes", "McLaren"],
     correctAnswer: 1
 }
+]

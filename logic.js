@@ -1,51 +1,71 @@
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 // Select start button and store 
-var startBtn = document.getElementById("start");
-var questionsElement = document.getElementById("questions");
-
+var startBtn = document.getElementById("startBtn");
+var questionsElement = document.querySelector(".questions");
+var start = document.querySelector(".start")
+var answerElement = document.querySelector(".choiceList");
+var clock = document.querySelector(".clock")
 // Call startQuiz function on button click;
-startBtn.onclick = startQuiz;
+startBtn.addEventListener("click", startQuiz)
 
 // Timer
-var count = questions.length ;
-var timer = setInterval(function() {
-console.log(count);
-count--;
-if(count === 0) {
-    stopInterval()
+var count = questionArray.length*15;
+var timeId = ""
+var questionIndex = 0
+var stopInterval = function () {
+    console.log('time is up!');
+    clearInterval(timeId);
 }
-}, 1000);
-
-var stopInterval = function() {
-console.log('time is up!');
-clearInterval(timer);
+function displayQuestion() {
+    questionsElement.textContent=questionArray[questionIndex].question
+     for (let i = 0; i < questionArray[questionIndex].choices.length; i++) {
+        //<li></li>    
+        var li = document.createElement("li")
+//<li>rs</li>
+            li.textContent = questionArray[questionIndex].choices[i]
+            answerElement.append(li)
+     }
 }
-
 // Function for initiating quiz
 function startQuiz() {
-    var startScreen = document.querySelector("#start-screen");
-    startScreen.setAttribute("class", "hide");
 
-    // Unhide the questions
-    questionsElement.removeAttribute("class");
-    console.log(questions[0].question)
-    console.log(questions[0].choices)
+     start.classList.add("hide") 
+      timeId = setInterval(function () {
+        console.log(count);
+        count--;
+        clock.textContent=count
+        if (count === 0) {
+            stopInterval()
+        }
+    }, 1000);
+
+    displayQuestion()
+
+    // var startScreen = document.querySelector("#start-screen");
+    // startScreen.setAttribute("class", "hide");
+
+    // // Unhide the questions
+    // questionsElement.removeAttribute("class");
+    // console.log(questions[0].question)
+    // console.log(questions[0].choices)
     // timeEl();
     // getCurrentQuestion()
-}  
-
-
-<script>
-var intervalId=""
-function myFunction() {
-intervalId=setInterval(function(){ -- time; }, 3000);
 }
+
+    var intervalId=""
+function myFunction() {
+
+        intervalId = setInterval(function () {
+            --time;
+        }, 1000)
+
+    }
+
+
 
 function stop() {
-clearInterval(intervalId)
-}
-</script>
+        clearInterval(intervalId)
+    }
+
 
 
 
