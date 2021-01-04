@@ -1,3 +1,45 @@
 .hide {
-    display: none;
+  display: none;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background-color: lightgray;
+}
+
+.showQuestion {
+  margin: auto;
+  width: 50%;
+  border: 3px solid lightgray;
+  padding: 10px;
+}
+.time {
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+    /* font-weight: 300; */
+}
+.questions {
+    font-size: 20px;
+}
+.start {
+    text-align: center;
+}
+.li {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: larger;
 }

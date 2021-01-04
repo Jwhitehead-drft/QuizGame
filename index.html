@@ -7,18 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scoresheet" href="highscores.html">View High Scores</div>
+    <div class="scoresheet" href="highscores.html"></div>
     <div class="time">Time Remaining <span class="clock"></span>    </div>
     <div class="start"   >
-        <h1>Challege quiz</h1>
-        <p>After clicking start, the quiz will begin. Answer questions as quickly as you can, as your score will be based on time remaining. Inccorect answers subtract time. Good luck!</p>
+        <h1>Gearhead quiz!</h1>
+        <p>After clicking start, the quiz will begin. Answer questions as quickly as you can, as your score will be based on time remaining. Incorect answers subtract time. Good luck!</p>
         <button id="startBtn">Start</button>
     </div>
     
+    <div class="showQuestion">
     <div class="questions"></div>
-        <ul class="choiceList"></ul>
+        <ol class="choiceList"></ol>
         <div class="quizMessage"></div>
-        <div class="result"></div>
+       
+    </div>
+    <div class="result hide">
+
+        <input type="text"id="Initials"> <button id="saveBtn">Save</button>
+    </div>
+    <div class="highScore hide">
+        <ol id="scoreBoard">
+            
+        </ol>
     </div>
     <script src="questions.js"></script>
     <script src="logic.js"></script>

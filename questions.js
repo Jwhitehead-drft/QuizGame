@@ -2,7 +2,8 @@ var questionArray = [{
     question: "Which engine came stock in the MKIV Supra?",
     choices: ["RB20", "LS3", "SR20", "2JZ"],
     correctAnswer: 3
-}, {
+}, 
+{
     question: "Which vehicle came with the SR20 engine?",
     choices: ["RX7", "300SX", "Silvia", "240SX"],
     correctAnswer: 2
